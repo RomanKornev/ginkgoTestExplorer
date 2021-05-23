@@ -107,7 +107,7 @@ export class GinkgoTest {
         const coverageDir = this.prepareCoverageDir(cwd);
 
         const report = `-reportFile ${reportFile}`;
-        const focus = `-focus "${spec}"`;
+        const focus = `-focus "${spec}$"`;
         const cover = `-cover -coverpkg=./... -coverprofile=${coverageDir}/${coverageOut}`;
         const command = `${this.ginkgoPath} ${report} ${focus} ${cover} -r`;
         let testResults: TestResult[] = [];
